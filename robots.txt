@@ -1,0 +1,6 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Point to your sitemap (optional if you make one later)
+Sitemap: https://wallypopke.site/sitemap.xml
