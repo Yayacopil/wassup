@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Security: Force HTTPS (HSTS) -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+    <meta property="og:locale" content="en_KE">
+    <!-- Preload Hero Banner (optimize LCP for SEO) -->
+    <link rel="preload" 
+          as="image" 
+          href="https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imagesrcset="https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1x, https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2x"
+          imagesizes="100vw"
+          fetchpriority="high">
+
+    <!-- Fallback Preload (WebP for browsers that don’t fully support AVIF) -->
+    <link rel="preload" 
+          as="image" 
+          href="https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          imagesrcset="https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1x, https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2x" 
+          imagesizes="100vw" 
+          fetchpriority="high">
+
+    <!-- Business / Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wallypop",
+      "url": "https://wallypop.site",
+      "logo": "https://wallypop.site/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/wallypopke",
+        "https://www.instagram.com/wallypopke",
+        "https://twitter.com/wallypopke",
+        "https://www.tiktok.com/@wallypopke"
+      ],
+      "description": "Wallypop offers modern, affordable wall frames and art decor in Kenya. Transform your walls with quality frames and stylish designs."
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/restrict.js"></script>
+    <script src="js/items.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/faviconn.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <title>Wallypop - Premium Wall Frames & Art Decor</title>
+<meta name="description" content="Wallypop crafts premium wall frames and art decor designed to elevate your spaces. Discover high-quality, stylish, and affordable frames that preserve memories and bring art to life.">
+<meta name="generator" content="Super">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Wallypop - Premium Wall Frames & Art Decor">
+<meta property="og:description" content="Discover premium wall frames and art decor from Wallypop. Stylish, high-quality, and affordable frames to showcase your art and memories.">
+<meta property="og:url" content="https://wallypop.site">
+<meta property="og:site_name" content="Wallypop">
+<meta property="og:locale" content="en-US">
+<meta property="og:image" content="https://wallypop.site/images/WallypopStore.png">
+<meta property="og:image:alt" content="Wallypop - Premium Wall Frames & Art Decor">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wallypop - Premium Wall Frames & Art Decor">
+<meta name="twitter:description" content="Wallypop crafts high-quality frames and art decor to make your walls beautiful. Shop stylish, durable, and affordable wall frames today.">
+<meta name="twitter:image" content="https://wallypop.site/images/WallypopStore.png">
+<meta name="twitter:image:alt" content="Wallypop - Premium Wall Frames & Art Decor">
+<meta name="keywords" content="wall frames, art decor, photo frames, premium frames, Kenya wall art, affordable art decor, Wallypop">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0V90S7H3MW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0V90S7H3MW');
+</script>
+</head>
+    <body class="bg-gray-50 font-sans">
+  <div id="loading" class="max-w-2xl mx-auto p-6 bg-yellow-100 rounded-lg shadow-lg text-center">
+    <p class="text-lg text-yellow-700">Hello..</p>
+  </div>
+  <div id="restricted" class="hidden max-w-2xl mx-auto p-6 bg-red-100 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-red-600 mb-4">Access Restricted</h1>
+    <p class="text-gray-700">This website is only available to users in Kenya.</p>
+  </div>
+  <div id="content" class="hidden">
+    <!-- All your website content (nav, hero, gallery, etc.) should be wrapped in this div -->
+    <!-- Navigation -->
+    <nav class="bg-[#EBEBDF] shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-gray-800">
+                    <img src="images/logo.png" alt="Wallypop Logo" class="h-10 w-auto"loading="lazy">
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Navigation links moved here and pushed right -->
+                <div class="hidden md:flex space-x-8 ml-auto">
+                    <a href="../" id="home-btn" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <div class="category-dropdown">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Categories <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+                        <div class="category-dropdown-content" id="categories-dropdown">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <a href="#custom" class="text-gray-700 hover:text-blue-600 font-medium">Custom</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                </div>
+                <button id="cart-btn" class="relative">
+                    <i class="fas fa-shopping-bag text-xl text-gray-700"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 z-40"></div>
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white px-4 fixed top-0 left-0 right-0 z-50">
+            <div class="py-4 space-y-4 border-t">
+                <a href="../" id="home-btn" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#framed-wall-arts" class="block text-gray-700 hover:text-blue-600 font-medium">Frames</a>
+                <a href="#custom" class="block text-gray-700 hover:text-blue-600 font-medium">Custom</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">Premium Framed Wall Arts</h1>
+                <p class="text-base sm:text-lg text-gray-600 mb-6">Showcase your memories and art in style with our high-quality, customizable frames. Perfect for any space and any decor.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button onclick="document.getElementById('framed-wall-arts').scrollIntoView({ behavior: 'smooth' });" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Shop Now</button>
+                    <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">Learn More</button>
+                    </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1729394405042-afe82cb3b066?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy"
+                          alt="Premium Poster Frame"
+                          class="rounded-lg shadow-xl w-full max-w-md frame-hover">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
+                        <span class="text-sm font-medium">Starting at KSh1,299.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Gallery -->
+    <section id="framed-wall-arts" class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center mb-8">
+            <h2 id="framed-wall-arts" class="text-3xl font-bold text-left text-gray-800 mr-4">Framed Wall Arts</h2>
+            <!-- Sort Arrows -->
+            <div class="flex items-center space-x-2">
+                <button id="sort-up" title="Sort Highest Selling First"
+                    class="bg-gray-200 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <button id="sort-down" title="Sort Lowest Selling First"
+                    class="bg-gray-200 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="poster-gallery">
+            <!-- Posters will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+
+    <!-- Custom Poster Section -->
+    <section id="custom" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Create Your Custom Poster</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+                <form id="custom-poster-form" class="space-y-6">
+                    <div>
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Framed Wall Art Description</label>
+                        <textarea id="description" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Describe what you want on your custom Framed Wall Art..." required></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="width" class="block text-sm font-medium text-gray-700 mb-1">Width (inches)</label>
+                            <input type="number" id="width" min="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., 12" required>
+                        </div>
+                        <div>
+                            <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Height (inches)</label>
+                            <input type="number" id="height" min="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., 18" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="deadline" class="block text-sm font-medium text-gray-700 mb-1">Needed By</label>
+                        <input type="date" id="custom-deadline" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        <span id="custom-deadline-error" class="text-red-500 text-sm mt-1 block"></span>
+                    </div>
+                    <!-- custom Delivery Details -->
+                    <div class="border-t border-gray-200 pt-4 mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Name</span>
+                            <input type="text" id="custom-name"
+                                placeholder="e.g., Jane Doe"
+                                class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+                                required>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Delivery Location</span>
+                            <input type="text" id="custom-delivery-location"
+                                placeholder="e.g., Nairobi, Westlands"
+                                class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+                                required>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Phone Number</span>
+                            <input type="tel" id="custom-phone-number"
+                                placeholder="e.g., 0712XXXXXX"
+                                class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+                                required>
+                        </div>
+                    </div>
+                    <!-- Add inside your custom poster form -->
+<div>
+    <label class="block text-gray-700 mb-1">Reference Image (optional)</label>
+    <input type="file" id="custom-artwork" accept="image/*" class="block w-full text-sm text-gray-500">
+</div>
+<button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        Request Custom Framed Wall Art
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Poster Success Modal -->
+    <div id="custom-poster-modal" class="custom-poster-modal">
+        <div class="custom-poster-modal-content">
+            <div class="mb-6">
+    <i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i>
+    <h3 class="text-2xl font-bold text-gray-800 mb-2">Ready to Submit?</h3>
+    <p class="text-gray-600 mb-6">
+        Please click the button below to chat with us on WhatsApp and send your custom Framed Wall Art request.
+    </p>
+    <button id="whatsapp-checkout-btn" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-md font-medium flex items-center justify-center space-x-2">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with us on WhatsApp</span>
+    </button>
+    <button id="close-modal-btn" class="mt-4 w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-md font-medium hover:bg-gray-50">
+        Close
+    </button>
+</div>
+<!-- Add this inside your custom poster modal -->
+<p class="text-gray-600 mb-2 text-sm">
+    If you attached an image, please send it via WhatsApp after clicking "Chat with us".
+</p>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The quality of these frames is exceptional. My artwork looks so professional now!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3"loading="lazy">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Sarah Muthoni</h4>
+                            <p class="text-sm text-gray-500">Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I ordered custom sizes for my gallery wall and they fit perfectly. Excellent service!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3"loading="lazy">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Raymond  Otieno</h4>
+                            <p class="text-sm text-gray-500">Interior Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The frames arrived well-packaged. Will definitely order again."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/63.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3"loading="lazy">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Michael Kamau</h4>
+                            <p class="text-sm text-gray-500">Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Our Story</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+                                    
+            <div class="flex flex-col md:flex-row items-center mb-12 sm:mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Crafting Quality Frames Since 2024</h3>
+                    <p class="text-gray-600 mb-4">
+                        Wallypop was born from a passion for preserving memories and showcasing art in the best possible way. 
+                        What started as a small workshop has grown into a trusted name in premium picture framing.
+                    </p>
+                    <p class="text-gray-600">
+                        Our founder  saw the need for high-quality, affordable frames 
+                        that could elevate any artwork or photograph without distracting from its beauty.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1664206449850-fd63ae4f0ae3?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy"
+                           alt="Our Workshop"
+                           class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+                                    
+            <div class="flex flex-col md:flex-row-reverse items-center mb-12 sm:mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Our Craftsmanship</h3>
+                    <p class="text-gray-600 mb-4">
+                        Each Wallypop is meticulously crafted using only the finest materials. We source sustainable woods, 
+                        premium metals, and museum-quality glass to ensure your artwork is protected and displayed beautifully.
+                    </p>
+                    <p class="text-gray-600">
+                        Our team of skilled artisans combines traditional techniques with modern technology to create frames 
+                        that stand the test of time while complementing contemporary interiors.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1553051021-9f94520a6cad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvb2QlMjBjcmFmdGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Craftsmanship" loading="lazy"
+                        class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+                                    
+            <div class="text-center mb-12 sm:mb-16">
+                <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-6 sm:mb-8">Our Values</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Sustainability</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">We use responsibly sourced materials and eco-friendly production methods.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-medal text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Quality</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Every frame is built to last with attention to detail and premium materials.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Customer Care</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">We stand behind our products with exceptional service and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-slide fixed top-0 right-0 w-full sm:w-96 h-full bg-white shadow-2xl z-50 overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Your Cart</h3>
+                <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+                                    
+            <div id="cart-items" class="space-y-4 mb-6">
+                <!-- Cart items will be added here dynamically -->
+                <div class="text-center py-8 text-gray-500" id="empty-cart-message">
+                    <i class="fas fa-shopping-cart text-4xl mb-4"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+                                    
+            <div class="border-t border-gray-200 pt-4 mb-6">
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Subtotal</span>
+                    <span id="cart-subtotal" class="font-medium">KSh0.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Shipping</span>
+                    <span class="font-medium">Calculated at checkout</span>
+                </div>
+                <div class="flex justify-between text-lg font-bold mt-4">
+                    <span>Total</span>
+                    <span id="cart-total">KSh0.00</span>
+                </div>
+            </div>
+            <!-- cart Delivery Details -->
+<div class="border-t border-gray-200 pt-4 mb-6 delivery-section" style="display: none;">
+</div>
+<div class="flex justify-between mb-2">
+    <span class="text-gray-600">Name</span>
+    <input type="text" id="customer-name"
+        placeholder="e.g., Jane Doe"
+        class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+        required>
+</div>
+<span id="customer-name-error" class="text-red-500 text-sm"></span>
+<div class="flex justify-between mb-2">
+    <span class="text-gray-600">Delivery Location</span>
+    <input type="text" id="delivery-location"
+        placeholder="e.g., Nairobi, Westlands"
+        class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+        required>
+</div>
+<span id="delivery-location-error" class="text-red-500 text-sm"></span>
+<div class="flex justify-between mb-2">
+    <span class="text-gray-600">Phone Number</span>
+    <input type="tel" id="phone-number"
+        placeholder="e.g., 0712XXXXXX"
+        class="text-right w-2/3 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+        required>
+</div>
+<span id="phone-number-error" class="text-red-500 text-sm"></span>
+<!-- Needed By Section -->
+<div class="flex flex-col mb-2">
+    <label for="deadline" class="block text-sm font-medium text-gray-700 mb-1">Needed By</label>
+    <input type="date" id="cart-deadline" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+    <span id="cart-deadline-error" class="text-red-500 text-sm mt-1 block"></span>
+    <span class="text-gray-500 text-xs mt-1 block">Please select a date that is at least one day from today. You cannot select today or a past date.</span>
+</div>
+<!-- Checkout and Continue Shopping Buttons -->
+             
+            <div class="space-y-3">
+                <button id="checkout-btn" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-medium flex items-center justify-center space-x-2 transition duration-300 pulse-animation">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Checkout via WhatsApp</span>
+                </button>
+                <button id="continue-shopping-btn"
+    class="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 rounded-lg font-medium transition duration-300">
+    Continue Shopping
+</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wallypop</h3>
+                    <p class="text-gray-400">Premium Framed Wall Arts for your art, photos, and memories. Quality craftsmanship since 2024.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#framed-wall-arts"class="text-gray-400 hover:text-white">All Frames</a></li>
+                        <li><a class="text-gray-400 hover:text-white">Wood Frames</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Help</h4>
+                    <ul class="space-y-2">
+                         <li>
+                             <a href="https://wa.me/254732657596?text=Hello%20Wally%20D%C3%A9pop!%20I%27d%20like%20to%20order%20the%20some%20of%20your%20arts" 
+                                class="text-gray-400 hover:text-white" target="_blank" rel="noopener">
+                                 Contact Us
+                             </a>
+                         </li>
+                         <li><a href="#custom" class="text-gray-400 hover:text-white">Custom Frames</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.tiktok.com/@wallypopke" class="text-gray-400 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579321058198" class="text-gray-400 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/wallypopke" class="text-gray-400 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/wallypopke" class="text-gray-400 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:0300amhours@gmail.com" class="text-gray-400 hover:text-white" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="tel:+254732657596" class="text-gray-400 hover:text-white">
+                                +254 732 657596
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Wallypop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Float Buttons Container -->
+<!-- Float Buttons Container -->
+<div class="fixed bottom-6 right-6 z-40 flex flex-col gap-4 items-end" x-data="{ showCall: false }">
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/254732657596?text=Hello%2C%20I%27m%20interested%20in%20your%20Framed%20Wall%20Art"
+       class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 transform hover:scale-110">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Call Button -->
+    <button @click="showCall = !showCall"
+            class="bg-blue-500 hover:bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 transform hover:scale-110 focus:outline-none">
+        <i class="fas fa-phone-alt text-2xl"></i>
+    </button>
+
+    <!-- Call Popup Banner -->
+    <div x-show="showCall" x-transition
+         class="bg-white border border-gray-300 rounded-xl shadow-md p-4 w-64 text-gray-800"
+         @click.outside="showCall = false">
+        <p class="text-sm">Call us at:</p>
+        <p class="font-bold text-lg mb-2">+254 732 657596</p>
+        <a href="tel:+254732657596"
+           class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">
+            Call
+        </a>
+    </div>
+
+</div>
+
+    <!-- Add this in your HTML file -->
+    <script src="js/java.js"></script>
+</body>
+</html>
