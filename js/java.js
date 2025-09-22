@@ -74,37 +74,43 @@
 
         filteredPosters.forEach(poster => {
             const isLiked = likedItems.includes(String(poster.id));
-            const inCart = cart.find(item => item.id === poster.id);
             posterGallery.innerHTML += `
-                <div class="poster-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg flex flex-col h-full">
-                    <div class="relative">
-                        <img src="${poster.image}" alt="${poster.title}" class="w-full h-64 object-contain sm:h-48 md:h-64 rounded-t-lg" loading="lazy">
+                <div class="flex flex-col items-center p-2">
+                    <div class="relative w-full cursor-pointer group">
+                        <img src="${poster.image}" alt="${poster.title}" 
+                            class="w-full h-64 object-contain transition duration-200 hover:scale-105 rounded"
+                            loading="lazy"
+                            data-id="${poster.id}">
                         <button class="like-btn absolute top-2 right-2 bg-white p-2 rounded-full shadow-md ${isLiked ? 'liked' : ''}" data-item="${poster.id}">
                             <i class="${isLiked ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                     </div>
-                    <div class="p-4 flex-1 flex flex-col justify-between">
-                        <h3 class="font-semibold text-lg mb-1">${poster.title}</h3>
-                        <p class="text-gray-600 mb-2">${poster.size} inches</p>
-                        <p class="text-indigo-600 font-bold mb-4">KSh${poster.price.toLocaleString('en-KE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-                        <div class="flex flex-col sm:flex-row gap-2">
-                            <button class="view-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-sm transition duration-300 w-full sm:w-1/2"
-                                data-id="${poster.id}">
-                                View
-                            </button>
-                            <button class="add-to-cart bg-black  hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300 w-full sm:w-1/2"
-                                data-id="${poster.id}"
-                                data-name="${poster.title}"
-                                data-price="${poster.price}"
-                                data-img="${poster.image}">
-                                Add to Cart
-                            </button>
-                        </div>
+                    <div class="w-full mt-2 flex flex-col items-start">
+                        <h3 class="font-semibold text-sm mb-1">${poster.title}</h3>
+                        <span class="text-sm text-gray-600 mb-1">${poster.size} inches</span>
+                        <span class="text-sm text-gray-600 mb-1">KSh${poster.price.toLocaleString('en-KE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+                        <button class="add-to-cart bg-black hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300 w-full mt-2"
+                            data-id="${poster.id}"
+                            data-name="${poster.title}"
+                            data-price="${poster.price}"
+                            data-img="${poster.image}">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
             `;
         });
-        setupPosterButtons(filteredPosters); // Pass the filtered list
+
+        // Make poster image clickable to open modal (no view button)
+        posterGallery.querySelectorAll('img[data-id]').forEach(img => {
+            img.addEventListener('click', function() {
+                const id = parseInt(this.getAttribute('data-id'));
+                const poster = filteredPosters.find(p => p.id === id);
+                showProductModal(poster, filteredPosters);
+            });
+        });
+
+        setupPosterButtons(filteredPosters);
     }
 
     // Setup add-to-cart and like button listeners

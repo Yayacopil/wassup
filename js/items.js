@@ -34,7 +34,7 @@
         { id: 32, title: "Muhammad Ali", size: "16x20", price: 1499.99, image: "images/siteposters/aliiinspiration.webp", category: "Inspirational Quotes" },
         { id: 34, title: "BMW M4 GT3", size: "12x12", price: 1499.99, image: "images/siteposters/bmwcarrs.png", category: "Cars" },
         { id: 35, title: "BMW M4 GT3 ", size: "11x14", price: 1499.99, image: "images/siteposters/bmwcars.webp", category: "Cars" },
-        { id: 36, title: "Lush floral", size: "24x36", price: 1299.99, image: "images/siteposters/Brown Modern Wall Art Frame Instagram Post.png", category: "Art" },
+        { id: 36, title: "Lush floral", size: "16x20", price: 1299.99, image: "images/siteposters/Brown Modern Wall Art Frame Instagram Post.png", category: "Art" },
         { id: 37, title: "Dynamic Basketball Art", size: "16x20", price: 1499.99, image: "images/siteposters/bryantsports.png", category: "Sports" },
         { id: 38, title: "BMW M4 GT3", size: "16x20", price: 1499.99, image: "images/siteposters/carbmw.png", category: "Cars" },
         { id: 40, title: "Flower Boy by Tyler", size: "18x24", price: 1499.99, image: "images/siteposters/creatormusic.png", category: "Music" },
