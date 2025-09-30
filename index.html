@@ -85,45 +85,49 @@
     <!-- All your website content (nav, hero, gallery, etc.) should be wrapped in this div -->
     <!-- Navigation -->
     <nav class="bg-[#EBEBDF] shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+    <div class="container mx-auto px-4 py-3">
+        <!-- Flex for both desktop and mobile -->
+        <div class="relative flex items-center justify-between w-full">
+            <!-- Mobile Menu Button (far left, only on mobile) -->
+            <button id="mobile-menu-btn" class="absolute left-0 top-1/2 -translate-y-1/2 md:hidden">
+                <i class="fas fa-bars text-xl text-gray-700"></i>
+            </button>
+            <!-- Logo (centered always) -->
+            <div class="flex-1 flex justify-center">
                 <span class="text-xl font-bold text-gray-800">
-                    <img src="images/logo.png" alt="Wallypop Logo" class="h-10 w-auto"loading="lazy">
+                    <img src="images/logo.png" alt="Wallypop Logo" class="h-10 w-auto" loading="lazy">
                 </span>
             </div>
-            <div class="flex items-center space-x-4">
-                <!-- Navigation links moved here and pushed right -->
-                <div class="hidden md:flex space-x-8 ml-auto">
-                    <a href="../" id="home-btn" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <div class="category-dropdown">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Categories <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
-                        <div class="category-dropdown-content" id="categories-dropdown">
-                            <!-- Categories will be populated by JavaScript -->
-                        </div>
-                    </div>
-                    <a href="#custom" class="text-gray-700 hover:text-blue-600 font-medium">Custom</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+            <!-- Cart Button (far right, always visible) -->
+            <button id="cart-btn" class="absolute right-0 top-1/2 -translate-y-1/2">
+                <i class="fas fa-shopping-bag text-xl text-gray-700"></i>
+                <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </button>
+        </div>
+        <!-- Desktop Navigation Links (centered under logo, only on desktop) -->
+        <div class="hidden md:flex justify-center mt-4 space-x-8">
+            <a href="../" id="home-btn" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+            <div class="category-dropdown">
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Categories <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+                <div class="category-dropdown-content" id="categories-dropdown">
+                    <!-- Categories will be populated by JavaScript -->
                 </div>
-                <button id="cart-btn" class="relative">
-                    <i class="fas fa-shopping-bag text-xl text-gray-700"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                </button>
-                <button id="mobile-menu-btn" class="md:hidden">
-                    <i class="fas fa-bars text-xl text-gray-700"></i>
-                </button>
             </div>
+            <a href="#custom" class="text-gray-700 hover:text-blue-600 font-medium">Custom</a>
+            <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 z-40"></div>
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white px-4 fixed top-0 left-0 right-0 z-50">
-            <div class="py-4 space-y-4 border-t">
-                <a href="../" id="home-btn" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                <a href="#framed-wall-arts" class="block text-gray-700 hover:text-blue-600 font-medium">Frames</a>
-                <a href="#custom" class="block text-gray-700 hover:text-blue-600 font-medium">Custom</a>
-                <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium">About</a>
-            </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 z-40"></div>
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-white px-4 fixed top-0 left-0 right-0 z-50">
+        <div class="py-4 space-y-4 border-t">
+            <a href="../" id="home-btn" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+            <a href="#framed-wall-arts" class="block text-gray-700 hover:text-blue-600 font-medium">Frames</a>
+            <a href="#custom" class="block text-gray-700 hover:text-blue-600 font-medium">Custom</a>
+            <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium">About</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
