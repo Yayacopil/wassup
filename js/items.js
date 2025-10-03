@@ -1,6 +1,6 @@
 // Poster data with categories
     const posters = [
-        { id: 1, title: "Abbey Road album cover.", size: "16x20", price: 1299.99, image: "images/siteposters/abbeyroad.png", category: "Music" },
+        { id: 1, title: " Kendrick Lamar's DAMN. album cover", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/damnn.jpeg", category: "Music" },
         { id: 2, title: "Drake's Views album cover", size: "16x20", price: 1299.99, image: "images/siteposters/adarekeviews.png", category: "Music" },
         { id: 3, title: "The Miseducation of Lauryn Hill. ", size: "16x20", price: 1299.99, image: "images/siteposters/alauryn.png", category: "Music" },
         { id: 4, title: "Muhammad Ali Motivation", size: "16x20", price: 1299.99, image: "images/siteposters/aliiiinspiartion.png", category: "Sports" },
