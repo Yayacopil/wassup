@@ -2,7 +2,7 @@
     const posters = [
         { id: 1, title: " Kendrick Lamar's DAMN. album cover", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/damnn.jpeg", category: "Music" },
         { id: 2, title: "DAMN. X SOS album cover", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/szaxken.jpeg", category: "Music" },
-        { id: 3, title: "The Miseducation of Lauryn Hill. ", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/alauryn.png", category: "Music" },
+        { id: 3, title: "SZA's SOS album cover ", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/SOSSZA.jpeg", category: "Music" },
         { id: 4, title: "Muhammad Ali Motivation", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/aliiiinspiartion.png", category: "Sports" },
         { id: 5, title: "SZA SOS album cover", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/asos.png", category: "Inspirational Quotes" },
         { id: 6, title: "Chirping Birds", size: "11.7 x 16.5(A3)", price: 999.99, image: "images/siteposters/birdsnature.png", category: "Nature" },
